@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body >
+    <h1 id="top">
+        Registration Form
+    </h1>
+    <div id="search">
+        <input type="search" name="search" placeholder="Search..">
+    </div>
+    <div>
+        * Mandatory field
+    </div>
+<br>
+    <div>
+        <form name="form" onsubmit='return validateForm()' action="formdata.php" method="post">
+            <fieldset>
+               <h3>
+                   Topic/Data
+               </h3>
+                <label>
+                    Please select a course:<br><br>
+                    <i>Topic / Date * </i><br>
+                </label>
+                <select id="topic" name="topic" title="topic">
+                    <option title="Please select a course" value="">Please select a course</option>
+                    <optgroup label="Level I">
+                        <option title="Financial stability, systemic risk and macroprudential policy (27-31 March 2017)" value="VER20170010">Financial stability, systemic risk and macroprudential policy (27-31 March 2017)</option>
+                        <option title="Seasonal adjustment of economic data (16-20 October 2017)" value="VER20170033">Seasonal adjustment of economic data (16-20 October 2017)</option>
+                        <option title="Price and volume indices in official statistics - theory and practise (20-24 November 2017)" value="VER20170015">Price and volume indices in official statistics - theory and practise (20-24 November 2017)</option>
+                    </optgroup>
+                    <optgroup label="Level II">
+                        <option title="Payment and securities settlement systems (19-23 June 2017)" value="VER20170020">Payment and securities settlement systems (19-23 June 2017)</option>
+                        <option title="Financial stability, systemic risk and macroprudential policy (10-14 July 2017)" value="VER20170022">Financial stability, systemic risk and macroprudential policy (10-14 July 2017)</option>
+                        <option title="Payment and securities settlement systems (4-8 December 2017)" value="VER20170040">Payment and securities settlement systems (4-8 December 2017)</option>
+                    </optgroup>
+                    <optgroup label="Expert Panels">
+                        <option title="Design and application of a risk-oriented; risk-centric audit approach – best practices (25-27 October 2017)" value="VER20170034">Design and application of a risk-oriented; risk-centric audit approach – best practices (25-27 October 2017)</option>
+                        <option title="Enabling the cloud for central banks (6-8 November 2017)" value="VER20170036">Enabling the cloud for central banks (6-8 November 2017)</option>
+                        <option title="Financial consumer protection (BaFin) (6-8 November 2017)" value="VER20170035">Financial consumer protection (BaFin) (6-8 November 2017)</option>
+                    </optgroup>
+                </select>
+            </fieldset><br><br>
+            <fieldset>
+                <h3>
+                    Central Bank/Institution
+                </h3>
+                <label>
+                   <i>
+                       Name of Central bank / Institution *
+                   </i><br>
+                </label>
+                <select id="bank" name="centralbank" title="centralbank">
+                    <option title="" value=""></option>
+                    <option title="Armenia: Central Bank of Armenia" value="Armenia_Central_Bank_of_Armenia">Armenia: Central Bank of Armenia</option>
+                    <option title="Aruba: Central Bank of Aruba" value="Aruba_Central_Bank_of_Aruba">Aruba: Central Bank of Aruba</option>
+                    <option title="Austria: Central Bank of the Republic of Austria" value="Austria_Central_Bank_of_the_Republic_of_Austria">Austria: Central Bank of the Republic of Austria</option>
+                    <option title="BEAC: Bank of Central African States" value="BEAC_Bank_of_Central_African_States">BEAC: Bank of Central African States</option>
+                    <option title="Belarus: National Bank of the Republic of Belarus" value="Belarus_National_Bank_of_the_Republic_of_Belarus">Belarus: National Bank of the Republic of Belarus</option>
+                    <option title="Belarus: Polessky State University" value="Belarus_Polessky_State_University">Belarus: Polessky State University</option>
+                    <option title="Belgium: National Bank of Belgium" value="Belgium_National_Bank_of_Belgium">Belgium: National Bank of Belgium</option>
+                    <option title="Bhutan: Royal Monetary Authority of Bhutan" value="Bhutan_Royal_Monetary_Authority_of_Bhutan">Bhutan: Royal Monetary Authority of Bhutan</option>
+                    <option title="Bolivia: Central Bank of Bolivia" value="Bolivia_Central_Bank_of_Bolivia">Bolivia: Central Bank of Bolivia</option>
+                    <option title="Bosnia and Herzegovina: Central Bank of Bosnia and Herzegovina" value="Bosnia_and_Herzegovina_Central_Bank_of_Bosnia_and_Herzegovina">Bosnia and Herzegovina: Central Bank of Bosnia and Herzegovina</option>
+                    <option title="Bosnia and Herzegovina: University of Sarajevo" value="Bosnia_and_Herzegovina_University_of_Sarajevo">Bosnia and Herzegovina: University of Sarajevo</option>
+                    <option title="Botswana: Bank of Botswana" value="Botswana_Bank_of_Botswana">Botswana: Bank of Botswana</option>
+                </select><br><br>
+                <label>
+                    If your institution is not included please contact us via email to
+                    <u>armine.mirzoyan@cba.am</u>
+                </label>
+            </fieldset><br><br>
+            <fieldset>
+                <h3>
+                    Central Bank/Institution
+                </h3>
+                <div class="main-info">
+                    <div class="left-side">
+                        <label>
+                                <i>Salutation * </i><br><br>
+                            </label>
+                            <select class="institution" name="institution" title="institution">
+                                <option title="" value="gender"></option>
+                                <option title="male">Mr.</option>
+                                <option title="female">Ms.</option>
+                            </select>
+                        <div class="left-side">
+                                <label><br>
+                                     <i>First Name</i><br><br>
+                                    <input type="text" class="textarea" name="firstname" maxlength="35"><br>
+                                    <span class="empty-firstname"></span>
+                                </label>
+                            <label><br><br>
+                                <i>Date of birth</i><br><br>
+                                <input type="date" name="bday" min="1920-01-02">
+                            </label>
+                             <label><br><br>
+                                 <i>E-mail *</i><br><br>
+                                 <input type="email" name="email">
+                                 <span class="emailf"></span>
+                             </label>
+                             <label><br><br>
+                                 <i>Room preference*</i><br><br>
+                                 <input type="checkbox" name="smoking" value="smoking">Smoking<br>
+                                 <input type="checkbox" name="nonsmoking" value="non smoking" checked>Non smoking<br>
+                                </label>
+                            <label><br><br>
+                                <i>Dietary requirements</i><br><br>
+                            </label>
+                            <select class="diet" name="diet" title="diet" size="5">
+                                <option title="beef">No beef</option>
+                                <option title="fish">No fish or seafood</option>
+                                <option title="none" selected>None</option>
+                                <option title="pork">No pork</option>
+                                <option title="vegeterian">Vegeterian</option>
+                            </select>
+                            <label><br><br>
+                                <i>Your company's webpage</i><br><br>
+                            <input type="url" name="homepage">
+                            </label>
+                            <label><br><br>
+                                <i>Preferred month of visit </i><br><br>
+                                <input type="month" name="month">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <label>
+                            <i>Academic Title * </i><br><br>
+                        </label>
+                        <select class="institution" name="academic-title" title="academic-title">
+                            <option title="" value="title"></option>
+                            <option title="male">Dr.</option>
+                            <option title="female">Prof.</option>
+                        </select>
+                        <label><br><br>
+                            <i>Last Name</i><br><br>
+                            <input class="textarea" type="text" name="lastname" maxlength="35">
+                        </label><br><br>
+                        <label>
+                            <i>Phone (Country code, area code, phone number) *</i><br><br>
+                            <input type="tel" name="tel">
+                        </label>
+                        <label><br><br>
+                            <i>Password *</i><br><br>
+                            <input type="password" name="password">
+                        </label>
+                        <label><br><br>
+                            <i>Professional experience by years</i><br><br>
+                            <input type="number" name="number">
+                        </label>
+                        <label><br><br>
+                            <i>Experience in range (from 1 to 10)</i><br>
+                            <input type="range" name="range" min="0" max="10">
+                        </label>
+                        <label><br><br> Your favourite color
+                            <input type="color" name="favcolor" value="#14FF3B">
+                        </label>
+                        <label><br><br>
+                            <i>Your preferred week of study</i><br><br>
+                            <input type="week" name="week"><br><br>
+                            <i>Date/time local </i><br><br>
+                            <input type="datetime-local" name="time"><br><br>
+                            <i>Preferred hour of your visit </i><br><br>
+                            <input type="time" name="usr_time"><br><br>
+                        </label>
+                    </div><br><br>
+                </div>
+            </fieldset><br><br>
+            <fieldset>
+                <h3>
+                    Questionnaire
+                </h3>
+                <label for="experience">
+                    <i>Write a short letter about your professional experience in the field of economics.</i>
+                </label>
+                <p>
+                    <textarea name="experience" id="experience" cols="100" rows="10">Your text here...</textarea>
+                </p>
+                <p>
+                    <i>Have you recently been working on any projects related to the subject of the course? (max. 400 characters ) *</i><br><br>
+                    <textarea name="subject" title="subject" id="subject" cols="100" rows="10" maxlength="400"></textarea>
+                </p>
+            </fieldset><br><br>
+            <fieldset>
+                <label>
+                    <i>
+                        Security question*
+                    </i><br><br>
+                    3 + 5 =
+                    <input type="number" name="number">
+                </label><br><br>
+                <label>
+                    Browse your picture here
+                    <input type="file" name="pic" accept="image/*">
+                </label><br><br>
+                <div id="radio">
+                    <label>
+                        <i>
+                            Special declaration of consent for the use of photographs*
+                        </i> <br><br>
+                    </label>
+                    <label>
+                        Any photographs taken during this international central banking course may be used by the Central Bank of Armenia for public
+                        relations purposes, including publication on the Central Bank's website. Your data will not be used for commercial or other unofficial purposes.
+                    </label><br><br>
+                </div>
+                <div id="radius">
+                    <label>
+                        Yes <input type="radio" name="agree" value="yes" checked>
+                    </label><br>
+                    <label>
+                        No <input type="radio" name="agree" value="no">
+                    </label>
+                </div>
+            </fieldset><br>
+            <div id="buttons">
+                <button type="button" onclick="alert('You have some mistakes in your form. Please review it once again!')">Button</button>
+            <input type="reset" name="reset" value="Reset">
+             <input type="submit" name="submit" value="Submit">
+            </div>
+            <footer>
+                <br>
+                <div id="fixed">
+                    <a href=#top>
+                        <img src="images/top.png" style="height: 45px" width="60">
+                    </a>
+                </div>
+            </footer>
+        </form>
+    </div>
+    <script src="input.js"></script>
+</body>
+</html>
